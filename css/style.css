@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+body {
+    --Brightorange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75); /* (paragraphs)*/
+    --VeryLightGray : hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+    --fontSize:16px;
+    background: #fff;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: var( --fontSize);
+}
+.center-text {
+    text-align: center;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    margin: 100px auto 0;
+    max-width: 1000px;
+    height: 500px;
+
+    color:#fff;   
+}
+.cards .card{
+    /* background-color:#000; */
+    background-color: var(--Brightorange);
+    /* border-radius: 8px; */
+      padding: 45px; 
+}
+.cards .card:first-child {
+    background-color: var(--Brightorange);
+    border-top-left-radius: 8px;
+
+    border-bottom-left-radius: 8px;
+}
+ .cards .card:nth-child(2) {
+    background-color: var( --DarkCyan);
+}
+ .cards .card:nth-child(3) {
+    background-color: var( --VeryDarkCyan);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.cards .card img{
+    margin-bottom: 35px;
+   
+}
+.cards .card h2{
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var( --VeryLightGray);
+    font-family: 'Big Shoulders Display', cursive;
+}
+.cards .card p{
+    color: var(--TransparentWhite);
+    display: block;
+    margin-bottom: 50px;
+}
+.cards .card a{
+    display: inline-block;
+    margin-top: 35px;
+    background: #fff;
+    padding: 13px 37px;
+    border-radius: 21px;
+    transition: .3s all ease-in-out;
+    width: max-content;
+    /* font-weight: 700; */
+}
+.cards .card:first-child a{
+   color: var(--Brightorange);
+}
+.cards .card:nth-child(2) a{
+    color: var( --DarkCyan);
+ }
+.cards .card:last-child a{
+    color: var( --VeryDarkCyan);
+ }
+ .cards .card a:hover{
+    background: transparent;
+    color: var( --VeryLightGray);
+    border: 2px solid  var( --VeryLightGray);
+ }  
+@media (max-width: 616px) {
+    .cards{
+        margin-bottom: 30px;
+        height: auto;
+    }
+    .card {
+        margin: 0 31px;
+        display: flex;
+        flex-direction: column;
+    }
+    .card  img{
+     width: 100px;      
+    }
+    .cards .card:first-child {
+        background-color: var(--Brightorange);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+   
+        border-bottom-right-radius: 0;
+    }
+   
+     .cards .card:nth-child(3) {
+        background-color: var( --VeryDarkCyan);
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 8px;
+        margin-bottom: 30px;
+    }
+    .cards .card a{
+        margin-top: 15px;
+    }
+}
