@@ -9,5 +9,5 @@ Project site: https://yasser22269.github.io/frontendmentorProject3/
 
 
 <br>
+ <img src="../master/design/active-states.jpg" alt="">
 
-../master/design/active-states.jpg
